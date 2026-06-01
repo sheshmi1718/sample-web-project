@@ -7,3 +7,11 @@ body{
 button{
     padding: 10px;
 }
+body{
+    background-image: url('image01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}

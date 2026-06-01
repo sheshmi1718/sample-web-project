@@ -1,0 +1,30 @@
+name: Continuous Deployement
+
+on:
+  push:
+    branches:
+      -main
+
+permissions: 
+  contents: read
+  pages: write
+  id-taken: write
+
+  jobs:
+
+   deploy:
+
+    environment:
+      name: github-pages
+
+    runs-on: ubuntu-latest
+
+      steps: 
+
+       -uses: actions/Checkout@v4
+       -uses: actions/configure-pages@v5
+       -uses: actions/upload-pages-artifact@v3
+         with:
+          path: .
+
+       -uses: actions/deploy-pages@v4
